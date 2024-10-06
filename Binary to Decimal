@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int BinaryToDec(int binNum){
+    int ans=0,pow=1;
+    while(binNum>0){
+         int rem;
+         rem=binNum%2;
+        binNum=binNum/2;
+        ans= ans+(binNum*pow);
+        pow=pow*2;
+    }
+    return ans;
+}
+int main(){
+    int binNum;
+    cout<<"Enter any number:";
+    cin>>binNum;
+    // for(int i=1;i<=binNum;i++){
+    //      cout<<"Binary: " <<i<<"->Decimal: "<<BinaryToDec(i) << "\n";
+    // }
+    cout<<"decimal number:"<<BinaryToDec(binNum);
+    return 0;
+}
